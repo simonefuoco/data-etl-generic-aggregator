@@ -5,7 +5,15 @@ class Aggregator {
     }
 
     aggregate() {
-        return this.callback(this);
+        let self = this;
+        return new Promise((resolve, reject) => {
+            let func = self.callback(self);
+            if (Promise.resolve(func) == func) {
+                func.then((values) => resolve(values));
+            } else {
+                resolve(func);
+            }
+        });
     }
 }
 
