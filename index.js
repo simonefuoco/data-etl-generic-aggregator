@@ -1,7 +1,7 @@
 class Aggregator {
 
     constructor(args) {
-        Object.assign(this, args);
+        Object.assign(this, this, args);
     }
 
     aggregate() {
