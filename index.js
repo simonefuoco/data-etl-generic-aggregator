@@ -1,7 +1,10 @@
 class Aggregator {
 
     constructor(args) {
-        Object.assign(this, this, args);
+        //Object.assign(this, this, args);
+        for (const [key, value] of Object.entries(args)) {
+            this[key] = value;
+        }
     }
 
     aggregate() {

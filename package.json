@@ -1,6 +1,6 @@
 {
   "name": "data-etl-generic-aggregator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Data ETL Generic Aggregator",
   "main": "index.js",
   "scripts": {
